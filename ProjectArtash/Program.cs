@@ -8,15 +8,15 @@ public class Program
         while (true)
         {
 
-            Client client = Carservice.MakingClientWithUser();
+            Client client = CarService.MakingClientWithUser();
             Carmarket carMarket = new Carmarket
             {
                 Name = "Metsaniv",
                 Cars = new List<Car>
         {
-        new Audi { Name = "Audi", Model = "a5", Year = 2015, Price = 8000 },
-        new Bmw { Name = "Bmw", Model = "x5", Year = 2006, Price = 15000 },
-        new Mercedes { Name = "Mercedes", Model = "s500", Year = 2012, Price = 35000 }
+        new Audi { Name = "Audi", Model = "a5", ProducedYear = new DateTime(2005,05,21), Price = 8000 },
+        new Bmw { Name = "Bmw", Model = "x5", ProducedYear = new DateTime(2006,12,25), Price = 15000 },
+        new Mercedes { Name = "Mercedes", Model = "s500", ProducedYear = new DateTime(2012,01,05), Price = 35000 }
         },
                 Employees = new List<Employee>
             {
@@ -24,8 +24,8 @@ public class Program
                 new Employee("Karine", "Grigoryan",33)
             }
             };
-            Car chosenCar = Carservice.OfferingCarsToCLient(client, carMarket.Cars);
-            Carservice.EndOfBuying(chosenCar, client);
+            Car chosenCar = CarService.OfferingCarsToCLient(client, carMarket.Cars);
+            CarService.EndOfBuying(chosenCar, client);
         }
 
     }

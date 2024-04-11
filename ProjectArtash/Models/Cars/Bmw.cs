@@ -8,5 +8,9 @@ namespace ProjectArtash.Models.Cars
 {
     public class Bmw : Car
     {
+        public Bmw()
+        {
+            Name = "Bmw";
+        }
     }
 }

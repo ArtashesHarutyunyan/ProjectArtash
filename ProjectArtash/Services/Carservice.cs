@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjectArtash.Services
 {
-    public static class Carservice
+    public static class CarService
     {
         public static Car OfferingCarsToCLient(Client client, List<Car> cars)
         {
@@ -61,7 +61,7 @@ namespace ProjectArtash.Services
         }
         public static void PrintHDM(Car car, Client client)
         {
-            Console.WriteLine($"{client.Name} {client.Surname} bought {car.Name} {car.Model} {car.Year} for {car.Price}$");
+            Console.WriteLine($"{client.Name} {client.Surname} bought {car.Name} {car.Model} {car.ProducedYear} for {car.Price}$");
         }
         public static Client MakingClientWithUser()
         {

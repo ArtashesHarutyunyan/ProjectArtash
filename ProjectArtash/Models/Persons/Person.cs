@@ -8,6 +8,7 @@ namespace ProjectArtash.Models.Persons
 {
     public class Person
     {
+        public static int maxAgeOfWorking { get; set; } = 65;
         Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -22,6 +23,7 @@ namespace ProjectArtash.Models.Persons
         {
             Console.WriteLine($"{this.Name} {this.Surname}");
         }
+
 
 
     }
