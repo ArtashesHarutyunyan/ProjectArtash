@@ -17,6 +17,10 @@ namespace ProjectArtash.Models.Persons
         {
             this.Wallet = amountOfWallet;
         }
+        public void AddMoneyToWallet(int money) 
+        {
+            Wallet += money;
+        }
 
         public override void PrintInformation()
         {

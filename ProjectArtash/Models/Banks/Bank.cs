@@ -15,9 +15,5 @@ namespace ProjectArtash.Models.Banks
         public int Capital { private get; set; }
         public static int PercentOfLoan { get; set; } = 18;
 
-        public virtual void GivingLoan(Client client)  // kara virtual voidy urish tex darna override int(chi kara,ba vonc?)
-        {
-
-        }
     }
 }
