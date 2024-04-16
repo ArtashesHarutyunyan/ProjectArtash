@@ -12,5 +12,6 @@ namespace ProjectArtash.Models.Cars
         {
             Name = "Bmw";
         }
+      
     }
 }
