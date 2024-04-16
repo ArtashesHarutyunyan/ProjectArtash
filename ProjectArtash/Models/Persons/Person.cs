@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectArtash.Models.Persons
 {
-    public class Person
+    public  class Person
     {
         public static int maxAgeOfWorking { get; set; } = 65;
         Guid Id { get; set; } = Guid.NewGuid();
@@ -21,8 +21,10 @@ namespace ProjectArtash.Models.Persons
         }
         public virtual void PrintInformation()
         {
-            Console.WriteLine($"{this.Name} {this.Surname}");
+
         }
+       
+        
 
 
 
