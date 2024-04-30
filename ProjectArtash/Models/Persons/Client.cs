@@ -21,7 +21,7 @@ namespace ProjectArtash.Models.Persons
         {
             Wallet += money;
         }
-        public void MinusMoneyToWallet(int money)
+        public void MinusMoneyFromWallet(int money)
         {
             Wallet -= money;
         }

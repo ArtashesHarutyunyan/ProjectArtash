@@ -9,6 +9,9 @@ namespace ProjectArtash.Models.Banks
 {
     public class InecoBank : Bank
     {
-      
+        public InecoBank()
+        {
+            this.Name = "inecobank";
+        }
     }
 }

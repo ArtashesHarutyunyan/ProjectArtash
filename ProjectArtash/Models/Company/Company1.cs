@@ -10,7 +10,7 @@ namespace ProjectArtash.Models.Company
     public class Company1 : Company
     {
         public override string Name { get => Name; set => Name = "Company1"; }
-        Employee Employee { get; set; }
+        public Employee Employee { get; set; }
 
         public override void SetSalaryOfEmployee()
         {

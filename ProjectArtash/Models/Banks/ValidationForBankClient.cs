@@ -7,27 +7,22 @@ using ProjectArtash.Models.Persons;
 
 namespace ProjectArtash.Models.Banks
 {
-    public static class ValidationForBankClient
+    public delegate bool BankClientValidationDelegate(BankClient bankClient);
+
+    public  class ValidationForBankClient
     {
-        public static bool isAgeOkay(Client bankclient)
+
+        public  bool isAgeOkay(BankClient bankclient)
         {
-            if ((bankclient.Age > 18) && (bankclient.Age < Person.maxAgeOfWorking))
-            {
-                return true;
-            }
-            else { return false; }
+            return (bankclient.Age > 18) && (bankclient.Age < Person.maxAgeOfWorking);
         }
-        public static bool isWorking(BankClient bankclient)
+        public  bool isWorking(BankClient bankclient)
         {
-            if (bankclient.CompanyWhereIsWorking != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (bankclient.CompanyWhereIsWorking != null);
+          
         }
-        
+        BankClientValidationDelegate ageValidation = client => client.Age > 18 && client.Age < Person.maxAgeOfWorking;
+        BankClientValidationDelegate workingValidation = client => client.CompanyWhereIsWorking != null;
+
     }
 }
